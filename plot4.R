@@ -9,7 +9,7 @@ select_data <- merge(day1, day2, all=TRUE)
 library(lubridate)
 
 new_data <- mutate(select_data, date_time = dmy_hms(paste(Date, Time)))
-png(file="plot4.png")
+png(file="plot4.png", width = 480, height = 480)
 
 par(mfrow=c(2,2))
 with(new_data, {

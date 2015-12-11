@@ -10,7 +10,7 @@ library(lubridate)
 
 new_data <- mutate(select_data, date_time = dmy_hms(paste(Date, Time)))
 
-png(file="plot3.png")
+png(file="plot3.png", width = 480, height = 480)
 with(new_data, plot(date_time, Sub_metering_1, type="l", xlab="",ylab="Engergy Sub metering"))
 with(new_data, lines(date_time, Sub_metering_2, col="red"))
 with(new_data, lines(date_time, Sub_metering_3, col="blue"))

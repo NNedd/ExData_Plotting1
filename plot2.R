@@ -12,5 +12,5 @@ new_data <- mutate(select_data, date_time = dmy_hms(paste(Date, Time)))
 
 with(new_data, plot(date_time, Global_active_power, type="l", xlab="",ylab="Global Active Power (kilowatts)"))
 
-dev.copy(png, file="plot2.png")
+dev.copy(png, file="plot2.png",width = 480, height = 480)
 dev.off()
